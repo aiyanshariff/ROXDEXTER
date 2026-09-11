@@ -1,0 +1,11 @@
+{
+  "name": "Waste Management",
+  "description": "Smart waste segregation, photo classification for wet, dry, and e-waste, environmental impact assessment, municipal GPS complaint portal, and mobile QR access.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

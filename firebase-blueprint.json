@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "Registered citizen accounts with phone number and SMS MFA status",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastLoginAt": { "type": "string" },
+        "mfaVerified": { "type": "boolean" },
+        "authMethod": { "type": "string" }
+      },
+      "required": ["uid", "phoneNumber"]
+    },
+    "complaints": {
+      "title": "Municipal Complaints",
+      "description": "Geo-tagged waste grievances submitted by citizens to municipal portals",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "citizenName": { "type": "string" },
+        "citizenPhone": { "type": "string" },
+        "state": { "type": "string" },
+        "portalUrl": { "type": "string" },
+        "complaintType": { "type": "string" },
+        "landmark": { "type": "string" },
+        "description": { "type": "string" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "latitude": { "type": "number" },
+            "longitude": { "type": "number" },
+            "accuracy": { "type": "number" },
+            "address": { "type": "string" },
+            "city": { "type": "string" },
+            "state": { "type": "string" },
+            "pincode": { "type": "string" },
+            "timestamp": { "type": "number" }
+          }
+        },
+        "wasteClassificationSummary": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["id", "citizenName", "citizenPhone", "complaintType", "landmark", "state"]
+    }
+  }
+}
